@@ -1,0 +1,34 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description"/><title>工欲善其事 必先利其器 | Dani's Blog</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"/><link rel="stylesheet" type="text/css" href="/css/highlight.css"/><link rel="stylesheet" type="text/css" href="/css/font.css"/><link rel="stylesheet" type="text/css" href="/css/noise.css"/><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"/><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"/></head><body><article class="wrapper"><div class="post-main"><div class="nav"><nav class="container"><a class="sidebar-nav-item active" href="/">Home</a><a class="sidebar-nav-item" href="/archives">Archives</a></nav><div class="container post-meta"><div class="post-tags"><a class="post-tag-link" href="/tags/tools/">tools</a></div><div class="post-time">2019-07-08</div></div></div><div class="container post-header"><h1>工欲善其事 必先利其器</h1></div><div class="container post-content"><h2 id="mac终端"><a href="#mac终端" class="headerlink" title="mac终端"></a>mac终端</h2><h3 id="mac终端shell切换"><a href="#mac终端shell切换" class="headerlink" title="mac终端shell切换"></a>mac终端shell切换</h3><blockquote>
+<p>17年初买了第一台mac pro，特别兴奋。</p>
+</blockquote>
+<p>Mac OS X 中自带了多款shell，<code>bash</code>、<code>ksh</code>、<code>zsh</code>等。</p>
+<p><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708113554.png" width="300"></p>
+<p>bash终端切为zsh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chsh -s /bin/zsh</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h3><blockquote>
+<p>Oh My Zsh 是一款社区驱动的命令行工具，正如它的主页上说的，Oh My Zsh 是一种生活方式。它基于 zsh 命令行，提供了主题配置，插件机制，已经内置的便捷操作。给我们一种全新的方式使用命令行。<a href="https://github.com/robbyrussell/oh-my-zsh/" target="_blank" rel="noopener">https://github.com/robbyrussell/oh-my-zsh/</a></p>
+</blockquote>
+<p>通过curl安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>或者通过wget安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>终端-&gt;偏好设置：选择主题</p>
+<h4 id="使用oh-my-zsh插件"><a href="#使用oh-my-zsh插件" class="headerlink" title="使用oh-my-zsh插件"></a>使用oh-my-zsh插件</h4><p>oh my zsh提供了很多超使用的插件，可在github的plugins目录下查看<br><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708115735.png" alt=""></p>
+<p>如git插件就提供了很多git命令的简写别名<br><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708115953.png" alt=""></p>
+<p>配置方式很简单，打开.zshrc文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.zshrc</span><br></pre></td></tr></table></figure></p>
+<p>修改plugin配置，类似如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">plugins=(</span><br><span class="line">  git</span><br><span class="line">  bundler</span><br><span class="line">  dotenv</span><br><span class="line">  osx</span><br><span class="line">  rake</span><br><span class="line">  rbenv</span><br><span class="line">  ruby</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<h2 id="vsCode"><a href="#vsCode" class="headerlink" title="vsCode"></a>vsCode</h2><p>从sublime转向vsCode，vsCode有强大的插件支持</p>
+<p>推荐几款vsCode的插件</p>
+<p><em>GitLens</em></p>
+<p>在开发过程中，能方便的知道当前行的最近修改时间的修改人。<br><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708134258.png" alt=""><br>以及细化的行的修改<br><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708134356.png" alt=""><br>还可以比较分支与分支的差别<br><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708134542.png" alt=""></p>
+<p><em>Quokka.js</em><br>能在编辑器中直接运行js代码，并得到结果</p>
+<p><img src="https://raw.githubusercontent.com/poppydani/picBed/master/images/20190708135030.png" alt=""></p>
+<p><em>vscode-fileheader</em></p>
+<p>给文件添加文件头</p>
+<p><em>beautify</em></p>
+<p>格式化文件</p>
+<p><em>code-settings-sync</em></p>
+<p>备份vsCode的插件</p>
+<p><em>markdown-preview-enhanced</em></p>
+<p>markdown文件</p>
+</div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"/><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+    $(".fancybox").fancybox();
+});
+</script></body></html>
