@@ -6,6 +6,10 @@
 <blockquote>
 <p>absolute定位的元素会脱离flex布局。如果absolute元素不加left和top会导致定位脱离掌控，变的诡异。</p>
 </blockquote>
+<h4 id="2020-08-24"><a href="#2020-08-24" class="headerlink" title="2020-08-24"></a>2020-08-24</h4><p>[兼容] 打包自动加上 <code>-webkit-mask-image: -webkit-radial-gradient(white, black)</code> 导致android 5.1以下的border-radius不生效。</p>
+<blockquote>
+<p>打包工具为什么会自动带上<code>-webkit-mask-image: -webkit-radial-gradient(white, black)</code>？<br>父元素使用border-radius和overflow:hidden做成圆形，子元素如果使用了transform属性，则父元素的overflow:hidden会失效。<br>解决方法：<code>-webkit-mask-image: none</code></p>
+</blockquote>
 </div></div><div class="post-main post-comment"></div></article><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"/><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
     $(".fancybox").fancybox();
 });
